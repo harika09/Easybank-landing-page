@@ -446,12 +446,11 @@ header.sticky li:hover{
 
     .banner-text h1{
         margin: 0;
-        width: 100%;
-      
+        width: 100%;  
     }
 
     .banner-text p{
-        margin: 0 auto 30px auto
+        margin: 20px auto 30px auto
     }
 
     .banner-text span{
@@ -511,13 +510,27 @@ header.sticky li:hover{
 }
 
 @media screen and (max-width: 600px){
+
+    .banner-text h1{
+        margin: 0;
+        width: 100%;  
+        font-size: 2rem;
+    }
     /* ========== Easy Bank ========== */
+    .easy-bank-content h1 {
+        font-size: 1.5rem;
+    }
+
     .features{
         grid-template-columns: 1fr;
     }
     /* ========== Easy Bank END ========== */
 
-     /* ========== Articles ========== */
+    /* ========== Articles ========== */
+    .articles-content .title {
+        font-size: 1.8rem;
+        
+    }
  
     .article-list{
         grid-template-columns: 1fr;
