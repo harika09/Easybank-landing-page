@@ -31,10 +31,11 @@
     font-family: var(--Public-sans);
 }
 
-/* body{
-    background: url(/assets/img/bg-intro-desktop.svg) no-repeat;
-    background-position: 650px -50px;
-} */
+ body{
+     background: url(/assets/img/bg-intro-desktop.svg) no-repeat;
+    background-position: 550px -150px;
+    background-size: contain;
+} 
 
 li{
     margin-left: 30px;
@@ -51,7 +52,7 @@ a{
 /* ========== Layout ========== */
 
 .bd-container{
-    max-width: 1040px;
+    max-width: 1024px;
     margin-right: 1rem;
     margin-left: 1rem;
 }
@@ -108,7 +109,7 @@ header.sticky li:hover{
 .btn-request{
     background-color:var(--Lime-Green);
     color: #fff;
-    padding: 10px 25px;
+    padding: 15px 35px;
     border-radius: 25px;
     cursor: pointer;
     font-size: .8rem;
@@ -123,17 +124,15 @@ header.sticky li:hover{
 
 /* ========== Banner ========== */
 
-.banner-container{
-    overflow: hidden;
-}
 
 .banner-content{
     display: grid;
-    grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    position: relative;
+    margin-bottom: 240px;
 }
 
 .banner-text h1{
@@ -142,37 +141,37 @@ header.sticky li:hover{
     margin-bottom: 30px;
     color: var(--Dark-Blue);
     width: 450px;
+    margin-top: 240px;
 }
 
 .banner-text p{
-    max-width: 500px;
-    font-size: 1.2rem;
+    max-width: 400px;
+    font-size: 1rem;
     margin-bottom: 30px;
     color: var(--Grayish-Blue);
 }
 
-
-/* .banner-img img{
+.mockups{
+    right: -140px;
+    top: -10px;
     position: absolute;
-    top: -50px;
-    width: 60%;
-    height: auto;
-    z-index: 1;   
-} */
+    width: 680px;
+   
+}
 
 /* ========== Banner END========== */
 
 /* ========== Easy Bank ========== */
 .easy-bank-container{
     background-color: var(--Very-Light-Gray);
-    color: var(--Dark-Blue);
-  
+    color: var(--Dark-Blue);  
 }
 
 .easy-bank-content{
     display: flex;
     flex-direction: column;
     align-self: center;
+    
 }
 
 .easy-bank-content h1{
@@ -219,6 +218,11 @@ header.sticky li:hover{
 /* ========== Easy Bank END ========== */
 
 /* ========== Articles ========== */
+
+.articles-content{
+    margin-bottom: 150px;
+}
+
 .articles-content .title {
     margin-top: 50px;
     font-size: 2.5rem;
@@ -228,7 +232,7 @@ header.sticky li:hover{
 
 .article-list{
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     justify-content: space-between;
@@ -241,17 +245,20 @@ header.sticky li:hover{
     flex-direction: column;
     background-color: #fff;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 15px;
     border-radius: 0 0 10px 10px;
-    margin-bottom: 80px;
-    max-width: 100%;
-   
+      
 }
 
 .articles img{
-    max-width: 250px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px 10px 0 0;
+}
+
+.articles .money{
+    height: 160px;
+    width: 100%;
 }
 
 .article-information span{
@@ -261,7 +268,7 @@ header.sticky li:hover{
 }
 
 .article-information h4{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: var(--Public-sans-300);
     color: var(--Dark-Blue);
     margin-bottom: 10px;
@@ -271,8 +278,9 @@ header.sticky li:hover{
 .article-information p{
    color: var(--Grayish-Blue);
    font-weight: var(--Public-sans-300);
-   font-size: .8rem;
+   font-size: .9rem;
 }
+
 /* ========== Articles END ========== */
 
 
@@ -358,6 +366,13 @@ header.sticky li:hover{
 
 /* ========== Media Query ========== */
 @media screen and (max-width: 900px){
+/* 
+    body{
+        background-image: url(/assets/img/bg-intro-mobile.svg) no-repeat;
+        background-size: contain;
+        background-position: 150px -150px;
+    } */
+
     /* ========== Header ========== */
     header{
         padding: 20px 10px;
@@ -408,6 +423,47 @@ header.sticky li:hover{
     }
     /* ========== Header END ========== */
 
+    /* ========== Banner ========== */
+
+    .banner-container{
+        background: url(/assets/img/bg-intro-mobile.svg) no-repeat;
+        background-position: center top;
+        background-size: contain;
+    }
+
+    .banner-content{
+        grid-template-columns: 1fr;
+        margin-bottom: 50px;
+        text-align: center;
+        margin-bottom: 120px;
+    }
+
+    .banner-content .banner-text{
+        grid-row: 2;
+    }
+
+    .banner-text h1{
+        margin: 0;
+        width: 100%;
+      
+    }
+
+    .banner-text p{
+        margin: 0 auto 30px auto
+    }
+
+    .banner-text span{
+        display: table;
+        margin: 0 auto;
+    }
+
+    .mockups{
+        position: static;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    /* ========== Banner END ========== */
+
     /* ========== Easy Bank ========== */
     .features{
         grid-template-columns: repeat(2, 1fr);
@@ -427,13 +483,11 @@ header.sticky li:hover{
         text-align: center;
     }
 
-    .article-list{
-        grid-gap: 0;
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .articles {
-        text-align: center;
+    .article-list{
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+
     }
 
    .article-information{
@@ -443,7 +497,14 @@ header.sticky li:hover{
     }
     .articles img{
         max-width: 80%;
+        display: block;
+        margin: 0 auto
     }   
+
+    .articles .money{
+        height: 220px;
+        width: 100%;
+    }
     /* ========== Articles END ========== */
 }
 
@@ -456,7 +517,6 @@ header.sticky li:hover{
 
      /* ========== Articles ========== */
  
-
     .article-list{
         grid-template-columns: 1fr;
     }
@@ -484,16 +544,12 @@ header.sticky li:hover{
         margin-bottom: 10px;
     }
 
- 
- 
-
-
     .menu-list .menu li{
         margin-left: 0;
     }
 }
 
-@media screen and (min-width: 1040px){
+@media screen and (min-width: 1024px){
     .bd-container{
         margin-right: auto;
         margin-left: auto;
