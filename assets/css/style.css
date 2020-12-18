@@ -32,9 +32,9 @@
 }
 
  body{
-     background: url(/assets/img/bg-intro-desktop.svg) no-repeat;
-    background-position: 450px -10px;
-    background-size: 80%;
+    background: url(/assets/img/bg-intro-desktop.svg) no-repeat;
+    background-position: 450px -20px;
+    background-size: contain;
 } 
 
 li{
