@@ -33,8 +33,8 @@
 
  body{
      background: url(/assets/img/bg-intro-desktop.svg) no-repeat;
-    background-position: 550px -150px;
-    background-size: contain;
+    background-position: 450px -10px;
+    background-size: 80%;
 } 
 
 li{
@@ -99,7 +99,7 @@ header.sticky .nav-menu li a{
 }
 
 header li a:hover{
-    opacity: 0.5;
+    color: var(--Lime-Green);
 }
 
 header.sticky li:hover{
@@ -107,7 +107,8 @@ header.sticky li:hover{
 }
 
 .btn-request{
-    background-color:var(--Lime-Green);
+    background-color: #20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);  
     color: #fff;
     padding: 15px 35px;
     border-radius: 25px;
@@ -117,7 +118,7 @@ header.sticky li:hover{
 }
 
 .btn-request:hover{
-    opacity: 0.7;
+    opacity: .7;
 }
 
 /* ========== Header END========== */
@@ -275,6 +276,11 @@ header.sticky li:hover{
     
 }
 
+.article-information h4:hover{
+    color: var(--Lime-Green);
+    cursor: pointer;
+}
+
 .article-information p{
    color: var(--Grayish-Blue);
    font-weight: var(--Public-sans-300);
@@ -313,7 +319,7 @@ header.sticky li:hover{
 }
 
 .social .social-media a:hover{
-    color: var(--Bright-Red);
+    color:var(--Lime-Green);
 }
 
 .menu-list{
@@ -356,10 +362,6 @@ header.sticky li:hover{
     font-size: .8rem;
 }
 
-.copy-right .copy:hover{
-    color: var(--Bright-Red);
-    cursor: pointer;
-}
 
 /* ========== Footer END ========== */
 
